@@ -11,6 +11,7 @@ int main()
     uint32_t x0, x1, x2, x3;
 
     wbsm4_gen(key);
+    
     // external encodings
     x0 = GET32(IN);
     x1 = GET32(IN + 4);
@@ -24,8 +25,10 @@ int main()
     PUT32(x1, EX_IN + 4);
     PUT32(x2, EX_IN + 8);
     PUT32(x3, EX_IN + 12);
+    
     // encryption
     wbsm4_encrypt(EX_IN, EX_OUT);
+    
     // external encodings
     x0 = GET32(EX_OUT);
     x1 = GET32(EX_OUT + 4);
