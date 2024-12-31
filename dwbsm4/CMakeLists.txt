@@ -4,7 +4,6 @@ project(dwbsm4 C)
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
-
 add_executable(dwbsm4
         main.c
         random.c
